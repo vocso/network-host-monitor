@@ -10,6 +10,12 @@ A self-hosted, lightweight monitoring tool for tracking the uptime and health of
 
 ---
 
+📸 UI Preview
+
+![UI Preview](admin/screenshot.png)
+
+---
+
 ## 📦 Features
 
 - Monitor hosts by IP with friendly names
@@ -191,12 +197,6 @@ This app uses token-based authentication.
 You’ll be prompted for an access token when you open the UI.
 
 The token must match `auth_token` in your `config.json`.
-
----
-
-📸 UI Preview
-
-![UI Preview](admin/screenshot.png)
 
 ---
 
