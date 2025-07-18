@@ -1,40 +1,48 @@
 let hosts = [];
 let editingId = null;
 
-// Load token from localStorage
-let authToken = localStorage.getItem('auth_token');
 
 // Dynamic auth header
 const AUTH_HEADER = () => ({
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': `Bearer ${authToken}`
+    'Authorization': `Bearer ${localStorage.getItem('auth_token')}`
   }
 });
 
 const authenticate = () => {
   const input = document.getElementById("tokenInput").value.trim();
+
   fetch("/data.json", {
-    headers: { 'Authorization': `Bearer ${input}` }
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${input}`
+    }
   })
     .then(res => {
       if (!res.ok) throw new Error("Unauthorized");
       return res.json();
     })
     .then(data => {
-      authToken = input;
-      localStorage.setItem('auth_token', authToken);
+      // ✅ Store token in localStorage only
+      localStorage.setItem('auth_token', input);
+
+      // ✅ Show app UI and start app logic
       document.getElementById("login").style.display = "none";
       document.getElementById("app").style.display = "block";
+
       hosts = data.hosts;
       renderHosts();
       loadTheme();
+
+      // ✅ Start polling only after successful auth
       setInterval(fetchAndRenderHosts, 10000);
     })
     .catch(() => {
       document.getElementById("loginError").style.display = "block";
     });
 };
+
 
 const loadTheme = () => {
   const mode = localStorage.getItem('theme') || 'dark';
@@ -94,7 +102,7 @@ const saveHost = () => {
 const saveToServer = () => {
   fetch("/save", {
     method: "POST",
-    ...AUTH_HEADER,
+    ...AUTH_HEADER(),
     body: JSON.stringify({ hosts })
   }).then(() => renderHosts());
 };
@@ -174,7 +182,7 @@ window.addEventListener("click", () => {
 });
 
 const fetchAndRenderHosts = () => {
-  fetch("/data.json", AUTH_HEADER)
+  fetch("/data.json", AUTH_HEADER())
     .then(res => res.json())
     .then(data => {
       hosts = data.hosts;
@@ -183,7 +191,7 @@ const fetchAndRenderHosts = () => {
 };
 
 const refreshHosts = () => {
-  fetch("/data.json", AUTH_HEADER)
+  fetch("/data.json", AUTH_HEADER())
     .then(res => res.json())
     .then(data => {
       hosts = data.hosts;

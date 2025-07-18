@@ -13,6 +13,13 @@
             "ip": "123.90.215.122",
             "statusCurrent": 1,
             "statusHistory": []
+        },
+        {
+            "id": 1752869001873,
+            "name": "add new host 4",
+            "ip": "1.2.3.4",
+            "statusCurrent": 0,
+            "statusHistory": []
         }
     ]
 }
