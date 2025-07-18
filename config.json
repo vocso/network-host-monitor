@@ -1,15 +1,16 @@
 {
   "email": {
-    "sender": "sarnetworkping@gmail.com",
-    "password": "zbja tdlv mods fhey",
+    "sender": "senderemail@gmail.com",
+    "password": "xxxx xxxx xxxx xxxx", 
     "smtp_server": "smtp.gmail.com",
     "smtp_port": 587,
-    "recipient": "lalit@sarnetwork.in,  ankitnagar000111@gmail.com"
+    "recipient": "notificationemail@gmail.com"
   },
   "config": {
     "interval": 60,
     "max_failures": 10,
     "interval_failures_check":1,
     "email_interval":600
-    }
+    },
+  "auth_token": "changeme123"
 }
