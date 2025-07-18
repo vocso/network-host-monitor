@@ -16,6 +16,14 @@ A self-hosted, lightweight monitoring tool for tracking the uptime and health of
 
 ---
 
+## 📚 Learn More
+
+For more context, implementation insights, and ideas for extending this tool, check out our blog post:
+
+👉 [Engineering a Lightweight IP Uptime Monitor for an ISP Using FastAPI & Raspberry Pi](https://www.vocso.com/blog/engineering-a-lightweight-ip-uptime-monitor-for-an-isp-using-fastapi-raspberry-pi/)
+
+---
+
 ## 📦 Features
 
 - Monitor hosts by IP with friendly names
