@@ -2,47 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Network Host Monitor</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h3>Network Host Monitor</h3>
-      <div>
-        <input
-          id="search"
-          type="text"
-          placeholder="🔍 Search hosts..."
-          oninput="renderHosts()"
-        />
-
-        <button onclick="showForm()">+ Add Host</button>
-        <button id="refreshBtn" onclick="refreshHosts()">🔄</button>
-        <button onclick="toggleTheme()">🌙</button>
+    <!-- Login Prompt -->
+    <div
+      id="login"
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+      "
+    >
+      <h3>🔐 Network Host Monitor</h3>
+      <input
+        id="tokenInput"
+        type="password"
+        placeholder="Enter access token..."
+        style="padding: 10px; margin: 10px"
+      />
+      <button onclick="authenticate()" style="padding: 10px 20px">Login</button>
+      <div id="loginError" style="color: red; margin-top: 10px; display: none">
+        Invalid token. Try again.
       </div>
-    </header>
-
-    <div id="hostStats" class="host-stats-bar">
-      <!-- This will be filled dynamically -->
     </div>
 
-    <div id="hostGrid"></div>
+    <!-- Main App UI -->
+    <div id="app" style="display: none">
+      <header>
+        <h3>Network Host Monitor</h3>
+        <div>
+          <input
+            id="search"
+            type="text"
+            placeholder="🔍 Search hosts..."
+            oninput="renderHosts()"
+          />
+          <button onclick="showForm()">+ Add Host</button>
+          <button id="refreshBtn" onclick="refreshHosts()">🔄</button>
+          <button onclick="toggleTheme()">🌙</button>
+        </div>
+      </header>
 
-    <div id="hostForm">
-      <input id="name" placeholder="Name" />
-      <input id="ip" placeholder="IP Address" />
-      <button onclick="saveHost()">Save</button>
-      <button onclick="hideForm()">Cancel</button>
+      <div id="hostStats" class="host-stats-bar"></div>
+      <div id="hostGrid"></div>
+
+      <div id="hostForm">
+        <input id="name" placeholder="Name" />
+        <input id="ip" placeholder="IP Address" />
+        <button onclick="saveHost()">Save</button>
+        <button onclick="hideForm()">Cancel</button>
+      </div>
+
+      <footer class="footer">
+        © 2025
+        <a href="https://www.vocso.com?ref=pm" target="_blank" rel="noopener"
+          >VOCSO Technologies</a
+        >. All rights reserved.
+      </footer>
     </div>
 
     <script src="script.js"></script>
-    <footer class="footer">
-      © 2025
-      <a href="https://www.vocso.com?ref=pm" target="_blank" rel="noopener"
-        >VOCSO Technologies</a
-      >. All rights reserved.
-    </footer>
   </body>
 </html>
