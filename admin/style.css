@@ -1,0 +1,342 @@
+:root {
+    --bg-dark: #0d1117;
+    --bg-light: #ffffff;
+  
+    --card-dark: #161b22;
+    --card-light: #f6f8fa;
+  
+    --text-dark: #c9d1d9;
+    --text-light: #1f2328;
+  
+    --border-dark: #30363d;
+    --border-light: #d0d7de;
+  
+    --green: #3fb950;
+    --red: #f85149;
+  
+    --hover-dark: #21262d;
+    --hover-light: #eaeef2;
+  
+    --border-radius: 6px;
+    --font: 'Segoe UI', system-ui, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font);
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.light {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5rem 1rem;
+  }
+  
+  /* Search & Buttons */
+  input[type="text"],
+  button {
+    font-family: var(--font);
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-dark);
+    background: var(--card-dark);
+    color: var(--text-dark);
+  }
+  
+  body.light input[type="text"],
+  body.light button {
+    background: var(--card-light);
+    border: 1px solid var(--border-light);
+    color: var(--text-light);
+  }
+  
+  button:hover {
+    background-color: var(--hover-dark);
+  }
+  body.light button:hover {
+    background-color: var(--hover-light);
+  }
+  
+  /* Grid Container */
+  #hostGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Host Card */
+  .host-card {
+    background-color: var(--card-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--border-radius);
+    padding: 0.75rem;
+    font-size: 0.92rem;
+    transition: transform 0.2s, background 0.2s;
+    position: relative;
+  }
+  
+  .host-card:hover {
+    background-color: var(--hover-dark);
+    transform: translateY(-2px);
+  }
+  
+  body.light .host-card {
+    background-color: var(--card-light);
+    border: 1px solid var(--border-light);
+  }
+  
+  body.light .host-card:hover {
+    background-color: var(--hover-light);
+  }
+  
+  /* Host Header Layout */
+  .host-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  /* Left side: name, ip, history */
+  .host-info {
+    flex-grow: 1;
+  }
+  
+  .host-info .host-name {
+    font-size: .8rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  
+  .host-info .host-ip {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    margin-bottom: 6px;
+  }
+  
+  /* Right side: status + uptime + menu */
+  .host-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    min-width: 80px;
+  }
+  
+  /* Status and uptime */
+  .status {
+    font-weight: 600;
+    font-size: 0.6rem;
+  }
+  
+  .up-status::before {
+    content: "🟢 ";
+  }
+  .down-status::before {
+    content: "🔴 ";
+  }
+  
+  .uptime {
+    font-size: 0.75rem;
+    opacity: 0.65;
+  }
+  
+  /* Context menu button */
+  .context-menu-btn {
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+  
+  /* Status Bar */
+  .status-line {
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+  }
+  
+  .dot {
+    width: 5px;
+    height: 7px;
+    border-radius: 1px;
+  }
+  
+  .dot.up {
+    background-color: var(--green);
+  }
+  .dot.down {
+    background-color: var(--red);
+  }
+  
+  /* Context Menu */
+  .context-menu {
+    position: absolute;
+    top: 38px;
+    right: 10px;
+    background: var(--card-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+  }
+  
+  body.light .context-menu {
+    background: var(--card-light);
+    border: 1px solid var(--border-light);
+  }
+  
+  .context-menu button {
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    text-align: left;
+    color: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .context-menu button:hover {
+    background: var(--hover-dark);
+  }
+  body.light .context-menu button:hover {
+    background: var(--hover-light);
+  }
+  
+  /* Form Modal */
+  #hostForm {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background: var(--card-dark);
+    color: var(--text-dark);
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    width: 320px;
+    border: 1px solid var(--border-dark);
+  }
+  
+  body.light #hostForm {
+    background: var(--card-light);
+    color: var(--text-light);
+    border: 1px solid var(--border-light);
+  }
+  
+  #hostForm label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  #hostForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border-dark);
+  }
+  
+  body.light #hostForm input {
+    border: 1px solid var(--border-light);
+  }
+  
+  /* Toggle Switch Text */
+  #modeToggle {
+    font-size: 0.9rem;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+
+  .footer {
+    text-align: center;
+    font-size: 0.6rem;
+    padding: 1rem;
+    opacity: 0.6;
+    color: var(--text-dark);
+  }
+  body.light .footer {
+    color: var(--text-light);
+  }
+  .footer a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  #refreshBtn {
+    margin-left: 8px;
+  }
+  
+  .no-hosts-message {
+    grid-column: 1 / -1;
+    padding: 1rem;
+    border: 1px solid var(--border-dark);
+    background-color: var(--card-dark);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  
+  body.light .no-hosts-message {
+    border: 1px solid var(--border-light);
+    background-color: var(--card-light);
+    color: var(--text-light);
+  }
+  
+
+  #hostStats {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .stat {
+    flex: 1 0 180px;
+    border-radius: 4px;
+    padding: 0.5rem;
+    text-align: center;
+    font-family: var(--font);
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .stat:nth-child(1) {
+    background-color: #1c2733;
+  }
+  
+  .stat:nth-child(2) {
+    background-color: #155c36;
+    color: #81f4b4;
+  }
+  
+  .stat:nth-child(3) {
+    background-color: #7a2323;
+    color: #ff9c9c;
+  }
+  .stat .stat-label {
+    font-size: 0.6rem;
+    font-weight: normal;
+    opacity: 0.7;
+    margin-bottom: 2px;
+  }

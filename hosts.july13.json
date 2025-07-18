@@ -1,0 +1,193 @@
+{
+    "hosts": [
+        {
+            "id": 1751973472903,
+            "name": "ELX - 36 Toyota, Sec 31 - 2nd Line",
+            "ip": "43.230.157.53",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751973960788,
+            "name": "Arena, Sec 9 by pass road",
+            "ip": "103.90.205.131",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751995766155,
+            "name": "SAR-ARENA BHARAT COLONY",
+            "ip": "103.90.207.18",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751995829801,
+            "name": "SAR-ARENA JASANA",
+            "ip": "103.90.207.94",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751995909713,
+            "name": "SAR-ARENA ADORE BHUDENA",
+            "ip": "103.90.205.138",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751996058821,
+            "name": "SAR JAIPUR VATIKA 1ST LINE",
+            "ip": "160.30.123.77",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751996318175,
+            "name": "SAR JAIPUR VATIKA 2ND LINE",
+            "ip": "103.207.168.205",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751996575909,
+            "name": "JAIPUR WORKSHSAROP 1ST LINE",
+            "ip": "160.30.123.79",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751996619137,
+            "name": "JAIPUR WORKSHSAROP 2ND LINE",
+            "ip": "103.255.9.57",
+            "statusCurrent": 0,
+            "statusHistory": []
+        },
+        {
+            "id": 1751996685483,
+            "name": "SAR JAIPUR PUSHP ENCLAVE 1ST LINE",
+            "ip": "160.30.123.78",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751996819958,
+            "name": "SAR JAIPUR SITAPUR 1ST LINE",
+            "ip": "103.255.9.236",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751996929219,
+            "name": "SAR-TOYOTA HATHIN",
+            "ip": "103.201.141.221",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751997097426,
+            "name": "SAR-TOYOTA HODAL 1ST LINE",
+            "ip": "14.102.66.234",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751997160109,
+            "name": "SAR-TOYOTA  HODAL 2ND LINE",
+            "ip": "157.119.215.136",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751997213186,
+            "name": "SAR-TOYOTA PALWAL 1ST LINE",
+            "ip": "103.201.141.243",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751997292714,
+            "name": "SAR-TOYOTA PALWAL 2ND LINE",
+            "ip": "103.161.232.178",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751997349411,
+            "name": "SAR-TOYOTA TIGAON 1ST LINE",
+            "ip": "103.69.219.125",
+            "statusCurrent": 0,
+            "statusHistory": []
+        },
+        {
+            "id": 1751997447908,
+            "name": "SAR-TOYOTA YMCA 2ND LINE",
+            "ip": "103.93.176.86",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751997515038,
+            "name": "SAR-TOYOTA MAYAPURI 1ST LINE",
+            "ip": "111.125.138.62",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1751997649993,
+            "name": "SAR-ARENA YARD BHARAT COLONY 1ST LINE",
+            "ip": "103.90.205.253",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1752321350595,
+            "name": "PP rolling 1ST line sec 25 BLB",
+            "ip": "14.102.191.217",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1752321636595,
+            "name": "PP rolling 2nd sec 58 BLB",
+            "ip": "103.38.70.235",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1752322117836,
+            "name": "PP rolling 1ST Line sec 58 BLB",
+            "ip": "103.46.239.132",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1752322191263,
+            "name": "PP rolling 1ST Line sec 59 BLB",
+            "ip": "103.46.239.130",
+            "statusCurrent": 0,
+            "statusHistory": []
+        },
+        {
+            "id": 1752345262508,
+            "name": "PP rolling 2nd line sec 59 BLB",
+            "ip": "103.43.6.100",
+            "statusCurrent": 1,
+            "statusHistory": []
+        },
+        {
+            "id": 1752387276782,
+            "name": "Sar 36 toyota 1st line sec 31 fbd",
+            "ip": "103.90.207.241",
+            "statusCurrent": 0,
+            "statusHistory": []
+        },
+        {
+            "id": 1752387440972,
+            "name": "Elx 36 toyota 2nd line sec 31 fbd",
+            "ip": "43.230.157.53",
+            "statusCurrent": 1,
+            "statusHistory": []
+        }
+    ]
+}
